@@ -56,7 +56,7 @@ const ThirdPagePartCalendar = styled.div`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-image: url("/heart.webp");
+      background-image: url("/heart.png");
       background-size: cover;
       z-index: -1;
     }
