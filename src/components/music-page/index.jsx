@@ -1,43 +1,56 @@
+import { useRef, useState, useEffect } from "react";
 import { MusicPagePart } from "./styled";
 import Music from "../../assets/vectors/music.png";
 import Song from "../../assets/audio/song.mp3";
-import { useRef, useState, useEffect } from "react";
 
-export const MusicPage = () => {
+export const MusicPage = ({ isPlaying }) => {
   const audioRef = useRef(null);
-  const [showTip, setShowTip] = useState(true);
-  const [isFading, setIsFading] = useState(false);
+  const [isCurrentPlaying, setIsCurrentPlaying] = useState(false);
 
-  // const hideTip = () => {
-  //   setIsFading(true);
-  //   setTimeout(() => setShowTip(false), 350);
-  // };
-
-  const handleClick = () => {
+  // Սա կաշխատի միայն այն ժամանակ, երբ երգի ֆայլը հաջողությամբ կբեռնվի բրաուզերում
+  const handleLoadedMetadata = () => {
     if (audioRef.current) {
-      audioRef.current.currentTime = 0.43;
-      audioRef.current.play();
+      audioRef.current.currentTime = 70; // Սահմանում ենք 1 րոպե (60 վայրկյան)
     }
-    // hideTip();
   };
 
-  // useEffect(() => {
-  //   // const timeout = setTimeout(hideTip, 4000);
-  //   // return () => clearTimeout(timeout);
-  // }, []);
+  // Սինքրոնիզացիա ծնող (parent) կոմպոնենտի prop-ի հետ
+  useEffect(() => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.play()
+        .then(() => setIsCurrentPlaying(true))
+        .catch((err) => console.log("Autoplay blocked or interrupted:", err));
+    } else {
+      audioRef.current.pause();
+      setIsCurrentPlaying(false);
+    }
+  }, [isPlaying]);
+
+  const handleClick = () => {
+    if (!audioRef.current) return;
+
+    if (isCurrentPlaying) {
+      audioRef.current.pause();
+      setIsCurrentPlaying(false);
+    } else {
+      audioRef.current.play()
+        .then(() => setIsCurrentPlaying(true))
+        .catch((err) => console.log("Playback failed:", err));
+    }
+  };
 
   return (
-    <MusicPagePart onClick={handleClick}>
-      <img loading="lazy" src={Music} alt="music" />
-      <audio ref={audioRef} src={Song} loop />
-      {/* {showTip && (
-        <div
-          onClick={handleClick}
-          className={`tip ${isFading ? "fade-out" : ""}`}
-        >
-          Սեղմեք այստեղ
-        </div>
-      )} */}
+    <MusicPagePart onClick={handleClick} style={{ opacity: isCurrentPlaying ? 1 : 0.5 }}>
+      <img loading="lazy" src={Music} alt="music toggle" />
+      {/* Ավելացրել ենք onLoadedMetadata իրադարձությունը (event) */}
+      <audio 
+        ref={audioRef} 
+        src={Song} 
+        loop 
+        onLoadedMetadata={handleLoadedMetadata} 
+      />
     </MusicPagePart>
   );
 };

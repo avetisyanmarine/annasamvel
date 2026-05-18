@@ -2,16 +2,13 @@ import { SecondPagePart, GridDiv } from "./styled";
 import { Container, Flexible } from "../../GlobalStyle";
 import { useEffect, useState } from "react";
 import Photo2 from "../../assets/image/serliqyser.png";
-import BlockImage from "../../assets/image/blockimage.JPG";
-import PhotoF1 from "../../assets/image/photof1.JPG";
-import PhotoGroup1 from "../../assets/image/groupphoto1.JPG";
-import PhotoGroup2 from "../../assets/image/groupphoto2.JPG";
-import PhotoGroup3 from "../../assets/image/groupphoto3.JPG";
+import BlockImage from "../../assets/image/blockimage.jpg";
+import PhotoF1 from "../../assets/image/photof1.jpg";
 import LineAes from "../../assets/image/lineaes.png";
 import { ThirdPagePartCalendar } from "../third-page/styled";
 
 export const SecondPage = () => {
-  const weddingDate = new Date(2026, 6, 18, 0, 0, 0);
+  const weddingDate = new Date(2026, 5, 26, 0, 0, 0);
 
   const calculateTimeLeft = () => {
     const now = new Date();
@@ -82,29 +79,19 @@ export const SecondPage = () => {
         </div>
 
         <div
-          className="bg-[#ffffff] rounded-[15px] w-[271px] h-[425px] mt-[50px] mx-auto drop-shadow-2xl flex flex-col items-center justify-center gap-4 p-4"
+          className="bg-[#ffffff] rounded-[15px] w-[271px] mt-[50px] mx-auto drop-shadow-2xl flex flex-col items-center  gap-4 p-4"
           data-aos="fade-up"
           data-aos-duration="600"
         >
-          <img src={BlockImage} className="mt-[6px]" alt="" />
+          <img src={BlockImage} alt="" />
           <p className="font-[600]">
             Մի ողջ կյանք <br /> գումարած մի ամբողջ հավերժություն
           </p>
         </div>
       </Container>
       <Container>
-        <div className="flex h-[100vh] my-11 gap-[20px]">
-          <div>
-            <img src={Photo2} className="h-[100vh]" />
-          </div>
-          <div className="flex flex-col gap-2">
-            <img src={PhotoGroup1} alt="" className="h-1/3 object-cover" />
-            <img src={PhotoGroup2} alt="" className="h-1/3 object-cover" />
-            <img src={PhotoGroup3} alt="" className="h-1/3 object-cover" />
-          </div>
-        </div>
         <div className="mt-10 mb-7">
-          <h2 className="mb-10">Սիրելի՝ ընկերներ և հարազատներ</h2>
+          <h2 className="mb-10">Սիրելի ընկերներ և հարազատներ</h2>
           <Flexible className="font-[600]">
             <p>
               Մեր սիրո ամենագեղեցիկ օրը մոտ է, և ձեզ մեծ սիրով հրավիրում ենք
@@ -116,7 +103,7 @@ export const SecondPage = () => {
       <img src={LineAes} alt="" className="w-full" />
       <Container>
         <h2 className="mt-5" data-aos="zoom-in">
-          Հուլիս
+          Հունիս
         </h2>
         <ThirdPagePartCalendar
           data-aos="fade-up"
@@ -133,8 +120,8 @@ export const SecondPage = () => {
             </div>
           ))}
           {[...Array(37)].map((_, i) =>
-            i > 1 && i <= 32 ? (
-              <div className={i - 5 == 14 ? "special" : ""}>{i - 1}</div>
+            i > -1 && i <= 29 ? (
+              <div className={i + 1 == 26 ? "special" : ""}>{i + 1}</div>
             ) : (
               <div className=""></div>
             ),

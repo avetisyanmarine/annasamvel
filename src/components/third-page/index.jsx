@@ -14,14 +14,14 @@ export const ThirdPage = () => {
   return (
     <ThirdPagePart>
       <Container>
-        <h2 style={{marginBottom: "40px"}}>Օրվա հանդիսավոր ընթացքը</h2>
+        <h2 style={{ marginBottom: "40px" }}>Օրվա հանդիսավոր ընթացքը</h2>
         <ThirdPagePartContext>
           <ThirdPageBlock
             imageSize={80}
             ImageSrc={Church}
-            number={"15:40"}
+            number={"15:30"}
             bigText="ՊՍԱԿԱԴՐՈՒԹՅԱՆ ԱՐԱՐՈՂՈՒԹՅՈՒՆ"
-            smallText="Սուրբ Մարիամ Աստվածածին եկեղեցում (Նորք Մարաշ)"
+            smallText="Սաղմոսավանք"
           />
           <ThirdPageBlock
             line={true}
@@ -29,7 +29,7 @@ export const ThirdPage = () => {
             imageSize={80}
             number={"17:30"}
             bigText="ՀԱՐՍԱՆՅԱՑ ՀԱՆԴԻՍՈՒԹՅՈՒՆ"
-            smallText="«Աղաբաբյանս» ռեստորանային համալիր"
+            smallText="Family and friends house "
           />
         </ThirdPagePartContext>
         <ThirdPagePartMini>

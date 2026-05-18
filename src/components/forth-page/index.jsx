@@ -1,11 +1,11 @@
 import { Container, Flexible } from "../../GlobalStyle";
 import { ForthPageBlock } from "./fortg-page-block";
 import { ForthPagePart, ForthPagePartContext } from "./styled";
-import Church from "../../assets/image/church.jpg";
+import Church from "../../assets/image/churchl.png";
 import Restaurant from "../../assets/image/restaurant.jpg";
 import HeartLine from "../../assets/image/heartline.png";
-import Photo3 from "../../assets/image/examp2.JPG";
-import LastPhoto from "../../assets/image/lastPhoto.JPG";
+import Photo3 from "../../assets/image/examp2.jpg";
+import LastPhoto from "../../assets/image/lastPhoto.jpg";
 
 export const ForthPage = () => {
   return (
@@ -14,17 +14,13 @@ export const ForthPage = () => {
         <ForthPagePartContext>
           <ForthPageBlock
             ImageSrc={Church}
-            bigText={"Սուրբ Մարիամ Աստվածածին եկեղեցի"}
-            mapSrc={
-              "https://yandex.com/navi/org/15438436392?si=1mtj5b4xhzkrcfv38q68txjte0"
-            }
+            bigText={"Սաղմոսավանք"}
+            mapSrc={"https://maps.app.goo.gl/e3TN9G1C3Gvphtoh8"}
           />
           <ForthPageBlock
             ImageSrc={Restaurant}
-            bigText={"«Աղաբաբյանս» ռեստորանային համալիր"}
-            mapSrc={
-              "https://yandex.com/navi/org/79838143048?si=1mtj5b4xhzkrcfv38q68txjte0"
-            }
+            bigText={"Family and friends house"}
+            mapSrc={"https://maps.app.goo.gl/tjw6ET1v4bZNSky58"}
           />
         </ForthPagePartContext>
         <div className="relative mt-10">
@@ -64,12 +60,12 @@ export const ForthPage = () => {
             Ձեր ներկայությունը մեզ համար կլինի ամենաթանկ նվերը, քանի որ միասին
             կանցկացնենք սիրով, ուրախությամբ և անմոռանալի պահերով լի օր։ <br />
             <br /> Խնդրում ենք մեր կարևոր օրվան Ձեր ներկայությունը հաստատել
-            մինչև Հունիսի 30-ը։
+            մինչև 15.06.2026։
           </Flexible>
           <hr className="mx-auto my-8 w-[300px]" />
         </div>
         <h2 className="text-[25px]! text-center my-[30px]">
-          Սիրով՝ Տուլգարյան և Մելիք-Ստեփանյանս ընտանիքներ
+          Սիրով՝ Սամվել և Աննա
         </h2>
       </Container>
     </ForthPagePart>
