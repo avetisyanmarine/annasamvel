@@ -6,6 +6,7 @@ import Restaurant from "../../assets/image/restaurant.jpg";
 import HeartLine from "../../assets/image/heartline.png";
 import Photo3 from "../../assets/image/examp2.jpg";
 import LastPhoto from "../../assets/image/lastPhoto.jpg";
+import AttendanceGuests from "../AttendanceGuests/index";
 
 export const ForthPage = () => {
   return (
@@ -64,6 +65,7 @@ export const ForthPage = () => {
           </Flexible>
           <hr className="mx-auto my-8 w-[300px]" />
         </div>
+        <AttendanceGuests />
         <h2 className="text-[25px]! text-center my-[30px]">
           Սիրով՝ Սամվել և Աննա
         </h2>
