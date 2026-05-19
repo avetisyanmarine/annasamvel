@@ -29,7 +29,7 @@ export const ThirdPage = () => {
             imageSize={80}
             number={"17:30"}
             bigText="ՀԱՐՍԱՆՅԱՑ ՀԱՆԴԻՍՈՒԹՅՈՒՆ"
-            smallText="Family and friends house "
+            smallText="Family and Friends House"
           />
         </ThirdPagePartContext>
         <ThirdPagePartMini>

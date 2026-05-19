@@ -96,7 +96,7 @@ const AttendanceGuests = () => {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbw0DbEUdwsEDM8iGRYfgQeIoEs81X1zChEoefnOu9OfSu_XPe7dLujoL6_2BcVy1c4LEQ/exec",
+        "https://script.google.com/macros/s/AKfycbwpz-RMrKJOeVz9QGqYQ96rqcOrKw5KvTmBrKCBYjW58n-oZC0YcPWXdfIW8OnrGU3Dbg/exec",
         {
           method: "POST",
           mode: "no-cors",

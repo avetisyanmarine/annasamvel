@@ -10,7 +10,6 @@ export const MusicPage = ({ isPlaying }) => {
   // Սա կաշխատի միայն այն ժամանակ, երբ երգի ֆայլը հաջողությամբ կբեռնվի բրաուզերում
   const handleLoadedMetadata = () => {
     if (audioRef.current) {
-      audioRef.current.currentTime = 54; // Սահմանում ենք 1 րոպե (60 վայրկյան)
     }
   };
 

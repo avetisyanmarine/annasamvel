@@ -20,7 +20,7 @@ export const ForthPage = () => {
           />
           <ForthPageBlock
             ImageSrc={Restaurant}
-            bigText={"Family and friends house"}
+            bigText={"Family and Friends House"}
             mapSrc={"https://maps.app.goo.gl/tjw6ET1v4bZNSky58"}
           />
         </ForthPagePartContext>
